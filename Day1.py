@@ -8,7 +8,6 @@ from pathlib import Path
 txt = Path('Input/day1.txt').read_text()
 list_text=txt.split('\n\n')
 list_text=[item.split('\n') for item in list_text]
-list_text[-1][-1]=0
 list_num=[[int(float(item)) for item in line] for line in list_text]
 list_sums=[sum(line) for line in list_num]
 result=max(list_sums)
